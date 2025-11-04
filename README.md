@@ -7,7 +7,7 @@ The final system is a **Two-Stream Convolutional Network** utilizing late fusion
 
 ---
 
-## 🎯 Key Objectives
+## 🎯Key Objectives
 * Perform comprehensive **Exploratory Data Analysis (EDA)** on the HMDB51 dataset.
 * Implement efficient techniques for **RGB Frame** and **Optical Flow** extraction.
 * Develop and compare multiple single-stream deep learning models (2D CNN, 3D CNN) to establish a performance baseline.
