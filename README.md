@@ -85,9 +85,19 @@ This phase involved building and testing single-stream architectures to understa
 | :--- | :--- | :--- |
 | `7.TwoStreams` | **Two-Stream Network** | The final architecture combining the Spatial (ResNet-50 on RGB) and Temporal (3D CNN on Optical Flow) streams using **Late Fusion**. This allows the model to leverage both appearance and explicit motion signals for classification. |
 
-<img width="456" height="190" alt="Screenshot 2025-11-05 at 00 01 07" src="https://github.com/user-attachments/assets/5c117823-3989-4bdf-87a6-103073f62021" />
+<div align="center">
 
-<img width="437" height="308" alt="Screenshot 2025-11-05 at 00 01 15" src="https://github.com/user-attachments/assets/a2fe010a-32ef-4522-9321-b6e9dc575d76" />
+  <figure style="display: inline-block; margin: 0 20px;">
+    <img src="https://github.com/user-attachments/assets/5c117823-3989-4bdf-87a6-103073f62021" width="456" height="190" alt="3CNN V3.0" title="3CNN V3.0" />
+    <figcaption><strong></strong></figcaption>
+  </figure>
+
+  <figure style="display: inline-block; margin: 0 20px;">
+    <img src="https://github.com/user-attachments/assets/a2fe010a-32ef-4522-9321-b6e9dc575d76" width="437" height="308" alt="3CNN V4.0" title="3CNN V4.0" />
+    <figcaption><strong></strong></figcaption>
+  </figure>
+
+</div>
 
 ---
 
