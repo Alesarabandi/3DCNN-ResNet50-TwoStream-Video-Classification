@@ -24,9 +24,9 @@ The project was executed in a sequential, iterative manner, documented across se
 
 | File | Description | Key Result |
 | :--- | :--- | :--- |
-| `1.EDA.html` | **Exploratory Data Analysis** | Initial setup, unzipping the HMDB51 dataset, and confirming video duration distribution across all 51 classes. |
-| `2.frames_extraction.html` | **RGB Frame Extraction** | Script for preprocessing the raw videos by extracting sequential RGB frames, which serve as the input for the spatial stream. |
-| `6.flow_extraction.html` | **Optical Flow Extraction** | Implementation of an algorithm (e.g., Farneback or TV-L1) to compute **dense Optical Flow** fields, which explicitly capture pixel-level motion for the temporal stream. |
+| `1.EDA` | **Exploratory Data Analysis** | Initial setup, unzipping the HMDB51 dataset, and confirming video duration distribution across all 51 classes. |
+| `2.frames_extraction` | **RGB Frame Extraction** | Script for preprocessing the raw videos by extracting sequential RGB frames, which serve as the input for the spatial stream. |
+| `6.flow_extraction` | **Optical Flow Extraction** | Implementation of an algorithm (e.g., Farneback or TV-L1) to compute **dense Optical Flow** fields, which explicitly capture pixel-level motion for the temporal stream. |
 
 ### **Phase 2: Single-Stream Model Development**
 
@@ -35,19 +35,19 @@ This phase involved building and testing single-stream architectures to understa
 #### **1. Pure Temporal Models (3D CNN)**
 | File | Model | Key Features & Outcome |
 | :--- | :--- | :--- |
-| `3.3DCNN_v1.0.html` | **Initial 3D CNN** | A foundational 3D Convolutional Network model designed to learn spatiotemporal features directly from video clips (stacked frames). |
-| `4.3DCNN-v2.0.html` | **Refined 3D CNN** | An optimized, smaller architecture with enhanced use of **Dropout** and refined hyperparameters. This version was significantly **more efficient and achieved superior accuracy** compared to `v1.0`, highlighting the importance of smart architecture design over parameter count. |
+| `3.3DCNN_v1.0` | **Initial 3D CNN** | A foundational 3D Convolutional Network model designed to learn spatiotemporal features directly from video clips (stacked frames). |
+| `4.3DCNN-v2.0` | **Refined 3D CNN** | An optimized, smaller architecture with enhanced use of **Dropout** and refined hyperparameters. This version was significantly **more efficient and achieved superior accuracy** compared to `v1.0`, highlighting the importance of smart architecture design over parameter count. |
 
 #### **2. Pure Spatial Model (2D CNN for Spatial Stream)**
 | File | Model | Key Features & Outcome |
 | :--- | :--- | :--- |
-| `5.ResNet50_finetuned.html` | **Fine-tuned ResNet-50** | Utilized a powerful pre-trained **ResNet-50** model, fine-tuned on the single RGB frames, to serve as the **Spatial Stream** in the final Two-Stream architecture. |
+| `5.ResNet50_finetuned` | **Fine-tuned ResNet-50** | Utilized a powerful pre-trained **ResNet-50** model, fine-tuned on the single RGB frames, to serve as the **Spatial Stream** in the final Two-Stream architecture. |
 
 ### **Phase 3: Final Architecture & Fusion**
 
 | File | Model | Key Features & Outcome |
 | :--- | :--- | :--- |
-| `7.TwoStreams.html` | **Two-Stream Network** | The final architecture combining the Spatial (ResNet-50 on RGB) and Temporal (3D CNN on Optical Flow) streams using **Late Fusion**. This allows the model to leverage both appearance and explicit motion signals for classification. |
+| `7.TwoStreams` | **Two-Stream Network** | The final architecture combining the Spatial (ResNet-50 on RGB) and Temporal (3D CNN on Optical Flow) streams using **Late Fusion**. This allows the model to leverage both appearance and explicit motion signals for classification. |
 
 ---
 
